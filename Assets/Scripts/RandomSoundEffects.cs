@@ -5,23 +5,18 @@ using UnityEngine;
 public class RandomSoundEffects : MonoBehaviour
 {
     public AudioSource crowAudio;
-    private int rand;
+    private float randomTime = 5;
+    private float timeCounter = 0;
 
-    // Update is called once per frame
-    void Start()
-    {
-        rand = Random.Range(1,3);
-    }
-    
     void Update()
     {
-        Invoke("CrowSound", rand);
-    }
-
-    void CrowSound()
-    {
-        Debug.Log("Sound loop");
-        crowAudio.Play();
-        rand = Random.Range(1,3);
+        if(timeCounter > randomTime)
+        {
+            randomTime = Random.Range(5,10);
+            timeCounter = 0;
+            crowAudio.Play();
+        }
+        
+        timeCounter += Time.deltaTime;
     }
 }
