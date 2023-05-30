@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2628766689991093892}
   - component: {fileID: 7045141061452484096}
+  - component: {fileID: 6219263596825139087}
   m_Layer: 0
   m_Name: Md - Mushroom
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7a886c6c20650e545a8fd8c58712c696, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,3 +83,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6219263596825139087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803377620179519025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c720cb27999427f43bf0027bf7976462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overlapLayer: 3
+  endLayer: 1
