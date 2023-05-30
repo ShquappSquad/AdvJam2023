@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LayerChange : MonoBehaviour
 {
-    public int overlapLayer; 
-    public int endLayer;
+    public int overlapLayer = 1; 
+    public int endLayer = 2;
     Renderer objectRenderer;
 
     void Start()

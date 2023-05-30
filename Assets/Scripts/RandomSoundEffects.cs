@@ -10,7 +10,6 @@ public class RandomSoundEffects : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        crowAudio = GetComponent<AudioSource>();
         rand = Random.Range(1,3);
     }
     
