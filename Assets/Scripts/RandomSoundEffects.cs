@@ -12,7 +12,7 @@ public class RandomSoundEffects : MonoBehaviour
     {
         if(timeCounter > randomTime)
         {
-            randomTime = Random.Range(5,10);
+            randomTime = Random.Range(10,20);
             timeCounter = 0;
             crowAudio.Play();
         }
