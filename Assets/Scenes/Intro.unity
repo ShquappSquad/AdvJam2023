@@ -2159,7 +2159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239837804510948087, guid: 08f445b450b43354eb1ce38a77f15bef, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08f445b450b43354eb1ce38a77f15bef, type: 3}
@@ -2811,7 +2811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7508072228422520483, guid: 4e8401cbb765c0a49ac179e1b0e950f9, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7771239737515393319, guid: 4e8401cbb765c0a49ac179e1b0e950f9, type: 3}
       propertyPath: m_Name
@@ -5964,7 +5964,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4204586446564100466, guid: 2573f1ffc9871894d90970cfcc4e4a16, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4245831295946962662, guid: 2573f1ffc9871894d90970cfcc4e4a16, type: 3}
       propertyPath: m_Name
@@ -7770,7 +7770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100923420369271708, guid: 5a98a4b713d6e2b409fc15a4a86d567a, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6887218497915509682, guid: 5a98a4b713d6e2b409fc15a4a86d567a, type: 3}
       propertyPath: m_RootOrder
@@ -8249,7 +8249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlapLayer: 3
-  endLayer: 1
+  endLayer: 2
 --- !u!61 &2063943206
 BoxCollider2D:
   m_ObjectHideFlags: 0
