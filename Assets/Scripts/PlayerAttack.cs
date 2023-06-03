@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
 
     void StopAnim()
     {
-        animator.SetTrigger("NoAttack");
+        //animator.SetTrigger("NoAttack");
         isSwinging = false;
     }
 }

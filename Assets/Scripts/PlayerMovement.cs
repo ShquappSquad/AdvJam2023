@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     private bool grounded = true;
+    private bool left, right = false;
     
     Vector2 movement;
 
@@ -32,7 +33,19 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.Translate(new Vector3(movement.x * moveSpeed, (movement.y * moveSpeed) + velocity, 0) * Time.deltaTime);
 
-        //Call animations
+        //Record which direction the player was facing last
+        if(movement.x < 0)
+        {
+            animator.SetTrigger("Left");
+            Debug.Log("Left");
+        }
+        if(movement.x > 0)
+        {
+            animator.SetTrigger("Right");
+            Debug.Log("Right");
+        }
+
+       //Call waLking animations animations
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
