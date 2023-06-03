@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSoundEffects : MonoBehaviour
+public class CrowSounds : MonoBehaviour
 {
     public AudioSource crowAudio;
     private float randomTime = 5;
