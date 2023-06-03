@@ -11,7 +11,11 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     private bool damaged = false;
     public SpriteRenderer render;
-    
+
+    private bool invulnerable;
+
+    private static float invulnerableDuration = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +44,24 @@ public class PlayerHealth : MonoBehaviour
     {
         if(damaged == false)
         {
-            currentHealth --;
-            animator.SetTrigger("IsDamaged");
+            TakeDamage();
         } 
+    }
+
+    private void TakeDamage()
+    {
+        if (!invulnerable)
+        {
+            invulnerable = true;
+            currentHealth--;
+            animator.SetTrigger("IsDamaged");
+
+            Invoke("EndInvulnerable", invulnerableDuration);
+        }
+    }
+
+    void EndInvulnerable()
+    {
+        invulnerable = false;
     }
 }
