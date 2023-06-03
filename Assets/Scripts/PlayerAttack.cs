@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
+    private bool isSwinging = false;
     
     // Start is called before the first frame update
     void Start()
@@ -17,14 +18,22 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Attack");
-            animator.SetTrigger("Attack");
-            Invoke("StopAnim",0.4f);
+            if (!isSwinging)
+            {
+                isSwinging = true;
+                Debug.Log("Attack");
+                animator.SetTrigger("Attack");
+                Invoke("StopAnim", 0.4f);
+            } else
+            {
+                Debug.Log("no spammy >:(");
+            }
         }
     }
 
     void StopAnim()
     {
         animator.SetTrigger("NoAttack");
+        isSwinging = false;
     }
 }
