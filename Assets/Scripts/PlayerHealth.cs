@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public Image h1, h2, h3;
     private float currentHealth;
     private bool damaged = false;
+    public SpriteRenderer render;
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,13 @@ public class PlayerHealth : MonoBehaviour
         if(damaged == false)
         {
             currentHealth --;
+            animator.SetTrigger("IsDamaged");
+            Invoke("ResetAnim",1);
         } 
+    }
+    
+    void ResetAnim()
+    {
+        animator.SetTrigger("IsNotDamaged");
     }
 }

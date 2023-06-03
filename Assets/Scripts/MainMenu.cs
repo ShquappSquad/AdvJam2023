@@ -83,8 +83,5 @@ public class MainMenu : MonoBehaviour
     
             // Stop Music
             audioMusic.Stop();
-    
-            // Destroy
-            //Destroy (this);
         }
 }
