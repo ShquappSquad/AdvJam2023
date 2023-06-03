@@ -35,18 +35,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    //Change this to happen when getting hit by an enemy, not colliding with props
     void OnTriggerEnter2D(Collider2D other)
     {
         if(damaged == false)
         {
             currentHealth --;
             animator.SetTrigger("IsDamaged");
-            Invoke("ResetAnim",1);
         } 
-    }
-    
-    void ResetAnim()
-    {
-        animator.SetTrigger("IsNotDamaged");
     }
 }
