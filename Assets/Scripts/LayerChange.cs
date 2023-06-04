@@ -15,13 +15,17 @@ public class LayerChange : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+#if LAYER_DEBUG
         Debug.Log("enter:" + overlapLayer);
+#endif
         objectRenderer.sortingOrder = overlapLayer;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+#if LAYER_DEBUG
         Debug.Log("exit:" + endLayer);
+#endif
         objectRenderer.sortingOrder = endLayer;
     }
 

@@ -21,12 +21,16 @@ public class PlayerAttack : MonoBehaviour
             if (!isSwinging)
             {
                 isSwinging = true;
+#if PLAYER_ATTACK_DEBUG
                 Debug.Log("Attack");
+#endif
                 animator.SetTrigger("Attack");
                 Invoke("StopAnim", 0.4f);
+#if PLAYER_ATTACK_DEBUG
             } else
             {
                 Debug.Log("no spammy >:(");
+#endif
             }
         }
     }

@@ -37,12 +37,16 @@ public class PlayerMovement : MonoBehaviour
         if(movement.x < 0)
         {
             animator.SetTrigger("Left");
+#if PLAYER_DEBUG
             Debug.Log("Left");
+#endif
         }
         if(movement.x > 0)
         {
             animator.SetTrigger("Right");
+#if PLAYER_DEBUG
             Debug.Log("Right");
+#endif
         }
 
        //Call waLking animations animations
