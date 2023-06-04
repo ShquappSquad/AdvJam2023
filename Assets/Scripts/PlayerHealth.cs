@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     private bool invulnerable;
 
-    private static float invulnerableDuration = 0.5f;
+    private static float invulnerableDuration = 1.5f;
 
     // Start is called before the first frame update
     void Start()
