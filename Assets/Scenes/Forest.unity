@@ -1693,7 +1693,7 @@ GameObject:
   - component: {fileID: 443343634}
   m_Layer: 0
   m_Name: Worker
-  m_TagString: Untagged
+  m_TagString: Worker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1747,6 +1747,7 @@ MonoBehaviour:
   playerScale: 0.85
   detectDistance: 10
   attackDistance: 2.5
+  height: -0.5
   rb: {fileID: 443343637}
   animator: {fileID: 443343634}
   player: {fileID: 1482742908}
@@ -7147,7 +7148,7 @@ GameObject:
   - component: {fileID: 1482742914}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
