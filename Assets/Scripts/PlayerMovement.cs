@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     private bool grounded = true;
-    private bool left, right = false;
     public GameObject escape;
     
     Vector2 movement;
@@ -43,14 +42,12 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("Left");
 #if PLAYER_DEBUG
-            Debug.Log("Left");
 #endif
         }
         if(movement.x > 0)
         {
             animator.SetTrigger("Right");
 #if PLAYER_DEBUG
-            Debug.Log("Right");
 #endif
         }
 
