@@ -7,12 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float playerScale = 0.85f;
     public float jumpHeight = 50f;
-    //private float gravity = -1f;
     private float velocity;
     public Rigidbody2D rb;
     public Animator animator;
     private bool grounded = true;
-    private bool left, right = false;
+    public Canvas canvas;
     
     Vector2 movement;
 
@@ -23,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvas.GetComponent<EscapeMenu>().OpenEscape();
+        }
+
         //Jump Input and execution
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
@@ -38,14 +42,14 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("Left");
 #if PLAYER_DEBUG
-            Debug.Log("Left");
+            //Debug.Log("Left");
 #endif
         }
         if(movement.x > 0)
         {
             animator.SetTrigger("Right");
 #if PLAYER_DEBUG
-            Debug.Log("Right");
+            //Debug.Log("Right");
 #endif
         }
 

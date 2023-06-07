@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CEO_Phone
+  m_Name: CEO_Melee Left
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,12 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 4c609c0b46deec84d838f099ade99133, type: 3}
+      value: {fileID: 21300000, guid: 2ccf49df00552e04ea4af7ebb81bb2fd, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: 7a80b18b2a2a48a4593db7b086c9e1e5, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: f0cd855e4b904c04393aa9f958d6b380, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 1
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -40,13 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 4c609c0b46deec84d838f099ade99133, type: 3}
+    - {fileID: 21300000, guid: 2ccf49df00552e04ea4af7ebb81bb2fd, type: 3}
+    - {fileID: 21300000, guid: 7a80b18b2a2a48a4593db7b086c9e1e5, type: 3}
+    - {fileID: 21300000, guid: f0cd855e4b904c04393aa9f958d6b380, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.375
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
