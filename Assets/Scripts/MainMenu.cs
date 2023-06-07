@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     public void Start()
     {
         fade.GetComponent<Image>().enabled = false;
+        dialogueDone = false;
     }
     
     public void PlayGame()
@@ -59,6 +60,7 @@ public class MainMenu : MonoBehaviour
         dialogueDone = true;
         dialogue.transform.localScale = new Vector3(10.5f, 2.75f, 0f);
         arrow.transform.localScale = new Vector3(10.5f, 2.75f, 0f);
+        Debug.Log("StartDialogue Function");
     }
     
     //Change to next scene
