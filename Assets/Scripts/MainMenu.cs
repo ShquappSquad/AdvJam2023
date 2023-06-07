@@ -11,13 +11,7 @@ public class MainMenu : MonoBehaviour
     public AudioSource audioMusic;
     public Image dialogue, arrow;
     private bool dialogueDone = false;
-    public GameObject fade;
 
-    private void Start()
-    {
-        fade.GetComponent<Image>().enabled = false;
-    }
-    
     //Called when the Play button is clicked
     public void PlayGame()
     {
@@ -46,7 +40,6 @@ public class MainMenu : MonoBehaviour
     public void StartFadeOut(int sceneIndex)
     {
         //Trigger fade to black animation then switch scenes after a delay
-        fade.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
         findAudio(); 
         Invoke("StartDialogue", 1f);

@@ -1386,7 +1386,6 @@ MonoBehaviour:
   audioMusic: {fileID: 1803787048}
   dialogue: {fileID: 723916709}
   arrow: {fileID: 1616932730}
-  fade: {fileID: 1098762332}
 --- !u!82 &1803787048
 AudioSource:
   m_ObjectHideFlags: 0

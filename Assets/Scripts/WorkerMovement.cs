@@ -68,9 +68,6 @@ public class WorkerMovement : MonoBehaviour
                         magnitude = offset.magnitude;
 
                         transform.Translate(new Vector3((offset.x * moveSpeed), (offset.y * moveSpeed), 0) * Time.deltaTime);
-
-                        animator.SetFloat("Horizontal", offset.x);
-                        animator.SetFloat("Speed", offset.sqrMagnitude);
                     }
                 }
 
