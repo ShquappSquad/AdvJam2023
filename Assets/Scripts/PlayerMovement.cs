@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     private bool grounded = true;
     private bool left, right = false;
+    public GameObject escape;
     
     Vector2 movement;
 
@@ -33,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.Translate(new Vector3(movement.x * moveSpeed, (movement.y * moveSpeed) + velocity, 0) * Time.deltaTime);
 
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            escape.GetComponent<EscapeMenu>().OpenEscape();
+        }
         //Record which direction the player was facing last
         if(movement.x < 0)
         {
