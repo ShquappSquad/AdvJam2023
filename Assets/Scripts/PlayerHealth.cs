@@ -9,8 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public Image h1, h2, h3;
     private float currentHealth;
-    private bool damaged = false;
+    //private bool damaged = false;
     public SpriteRenderer render;
+    public int zone = 1;
 
     private bool invulnerable;
 
@@ -42,7 +43,23 @@ public class PlayerHealth : MonoBehaviour
     //Change this to happen when getting hit by an enemy, not colliding with props
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(damaged == false)
+        //Set current zone for CrowSounds script
+        if(other.gameObject.CompareTag("Zone"))
+        {
+            Debug.Log("Current Zone " + zone);
+            
+            if(zone == 1)
+            {
+                zone = 2;
+                Debug.Log("Zone Change " + zone);
+            }
+            else
+            {
+                zone = 1;
+                Debug.Log("Default Zone Change " + zone); 
+            }
+        }
+        if(other.gameObject.CompareTag("Enemy"))
         {
             TakeDamage();
         } 

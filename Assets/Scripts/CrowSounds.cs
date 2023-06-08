@@ -8,10 +8,13 @@ public class CrowSounds : MonoBehaviour
     public AudioSource truckAudio;
     private float randomTime = 5;
     private float timeCounter = 0;
-    private int zone = 1;
+    public GameObject player;
+    private int zone;
 
     void Update()
     {
+        zone = player.GetComponent<PlayerHealth>().zone;
+
         if(timeCounter > randomTime)
         {
             randomTime = Random.Range(10,20);
@@ -23,8 +26,8 @@ public class CrowSounds : MonoBehaviour
             if(zone == 2)
             {
                 truckAudio.Play();
-            }
-        
+            } 
+        }
         timeCounter += Time.deltaTime;
     }
-}
+} 
