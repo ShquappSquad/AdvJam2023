@@ -5,39 +5,43 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
-    private bool isSwinging = false;
+    public Transform attackPoint;
+    private float attackRange = 2;
+    public LayerMask enemyLayers;  
     
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (!isSwinging)
-            {
-                isSwinging = true;
-#if PLAYER_ATTACK_DEBUG
-                Debug.Log("Attack");
-#endif
-                animator.SetTrigger("Attack");
-                Invoke("StopAnim", 0.4f);
-#if PLAYER_ATTACK_DEBUG
-            } else
-            {
-                Debug.Log("no spammy >:(");
-#endif
-            }
+            Attack();
         }
     }
 
-    void StopAnim()
+    void Attack()
     {
-        //animator.SetTrigger("NoAttack");
-        isSwinging = false;
+        //Call Animation
+        animator.SetTrigger("Attack");
+
+        //Find Enemies
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        //Apply Damage
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            //Call Damage Flash script
+            //enemy.GetComponent<DamageFlash>().FlashStart();
+
+            //Subtract health from total
+            Debug.Log("We hit " + enemy.name);
+        }
+    
     }
+
+
 }
