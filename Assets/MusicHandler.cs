@@ -21,4 +21,9 @@ public class MusicHandler : MonoBehaviour
     {
         Debug.Log("Play Construction Music");
     }
+
+    void FadeAudio()
+    {
+
+    }
 }

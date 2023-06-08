@@ -13283,6 +13283,7 @@ MonoBehaviour:
   h3: {fileID: 482132972}
   render: {fileID: 1482742910}
   zone: 1
+  handler: {fileID: 406787095}
 --- !u!114 &1482742914
 MonoBehaviour:
   m_ObjectHideFlags: 0
