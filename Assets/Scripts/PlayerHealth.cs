@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     //private bool damaged = false;
     public SpriteRenderer render;
     public int zone = 1;
+    public GameObject handler;
 
     private bool invulnerable;
 
@@ -48,15 +49,16 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Current Zone " + zone);
             
+
             if(zone == 1)
             {
                 zone = 2;
-                Debug.Log("Zone Change " + zone);
+                handler.GetComponent<MusicHandler>().PlayConstruction();
             }
             else
             {
                 zone = 1;
-                Debug.Log("Default Zone Change " + zone); 
+                handler.GetComponent<MusicHandler>().PlayForest();
             }
         }
         if(other.gameObject.CompareTag("Enemy"))
