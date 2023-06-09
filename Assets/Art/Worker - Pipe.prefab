@@ -119,10 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b5d05ae10bc4e46aefe51b0df49c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   playerScale: 0.85
   detectDistance: 10
-  attackDistance: 2.5
+  attackDistance: 1
   height: 0
   rb: {fileID: -1860992452064338159}
   animator: {fileID: -6280548646911135365}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb43c3f340840246a8c97ab9b264188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 4
   animator: {fileID: -6280548646911135365}
 --- !u!70 &5930005426995862900
 CapsuleCollider2D:

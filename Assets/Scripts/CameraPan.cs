@@ -18,9 +18,9 @@ public class CameraPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x >  232)
+        if (player.position.x > 232)
         {
-            transform.position = new Vector3(233, transform.position.y, -10);
+            transform.position = new Vector3(0, transform.position.y, -10);
         }  
         if (player.position.x <= 0)
         {

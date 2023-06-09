@@ -6,7 +6,9 @@ public class CEOHealth : MonoBehaviour
 {
     public float maxHealth;
     private float currentHealth;
+    public float callForHelp;
     public Animator animator;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class CEOHealth : MonoBehaviour
 
         Debug.Log(name + " has " + currentHealth + " health");
 
-        if(currentHealth <= 2)
+        if(currentHealth <= callForHelp)
         {
             Debug.Log("WE NEED BACKUP. SEND IN KEVIN.");
             animator.SetTrigger("Phone");
@@ -36,5 +38,6 @@ public class CEOHealth : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
+        player.GetComponent<PlayerHealth>().WinScreen();
     }
 }

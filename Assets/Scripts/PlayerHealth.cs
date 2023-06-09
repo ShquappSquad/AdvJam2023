@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             h3.transform.localScale = new Vector3(0, 0, 0);
-            EndScreen();
+            LoseScreen();
         }
     }
 
@@ -88,21 +88,18 @@ public class PlayerHealth : MonoBehaviour
         invulnerable = false;
     }
 
-    void EndScreen()
+    public void WinScreen()
     {
         canvas.GetComponent<Canvas>().enabled = true;
         Time.timeScale = 0;
+        e1.transform.localScale = new Vector3(1, 1, 1);
+    }
 
-        if(dead == false)
-        {
-            //Win Screen
-            e1.transform.localScale = new Vector3(1, 1, 1);
-        }
-        if(dead == true)
-        {
-            //Lose Screen
-            e2.transform.localScale = new Vector3(1, 1, 1);
-        }
+    void LoseScreen()
+    {
+        canvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
+        e2.transform.localScale = new Vector3(1, 1, 1);
     }
 
     public void GoToMainMenu()
