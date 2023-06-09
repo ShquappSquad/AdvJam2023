@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b5d05ae10bc4e46aefe51b0df49c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3.5
   playerScale: 0.85
   detectDistance: 10
   attackDistance: 1

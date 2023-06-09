@@ -29,7 +29,7 @@ public class MusicHandler : MonoBehaviour
         //StartCoroutine(findAudioAndFadeOut());
     }
 
-    /* IEnumerator findAudioAndFadeOut()
+/*     IEnumerator findAudioAndFadeOut()
         {
             // Find Audio Music in scene
             audioMusic = GameObject.Find("Main Menu").GetComponent<AudioSource>();
@@ -46,5 +46,5 @@ public class MusicHandler : MonoBehaviour
     
             // Stop Music
             audioMusic.Stop();
-        } */
+        }  */
 }
