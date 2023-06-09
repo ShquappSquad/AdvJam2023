@@ -17,7 +17,8 @@ public class MainMenu : MonoBehaviour
     //Called when the Play button is clicked
     public void Start()
     {
-        fade.GetComponent<Image>().enabled = false;
+        Time.timeScale = 1;
+        //fade.GetComponent<Image>().enabled = false;
         dialogueDone = false;
     }
     
@@ -66,7 +67,6 @@ public class MainMenu : MonoBehaviour
     //Change to next scene
         public void StartSceneChange()
         {
-            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

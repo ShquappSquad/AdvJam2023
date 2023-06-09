@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public Animator animator;
     public float maxHealth;
-    public Image h1, h2, h3;
+    public Image h1, h2, h3, e1, e2;
     private float currentHealth;
     //private bool damaged = false;
     public SpriteRenderer render;
     public int zone = 1;
     public GameObject handler;
+    public Canvas canvas;
+    private bool dead = false;
 
     private bool invulnerable;
 
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             h3.transform.localScale = new Vector3(0, 0, 0);
+            EndScreen();
         }
     }
 
@@ -82,5 +86,33 @@ public class PlayerHealth : MonoBehaviour
     void EndInvulnerable()
     {
         invulnerable = false;
+    }
+
+    void EndScreen()
+    {
+        canvas.GetComponent<Canvas>().enabled = true;
+        Time.timeScale = 0;
+
+        if(dead == false)
+        {
+            //Win Screen
+            e1.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if(dead == true)
+        {
+            //Lose Screen
+            e2.transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void RestartGame()
+    {
+        //Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

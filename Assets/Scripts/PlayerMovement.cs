@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
 
     // Update is called once per frame which makes it bad for physics calculations
+    void Start()
+    {
+        Time.timeScale = 1;
+    }
+    
     void Update()
     {
         //Player Input
