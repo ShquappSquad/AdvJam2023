@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
     public Transform attackPoint;
-    private float attackRange = 2;
+    private float attackRange = 2.25f;
     public LayerMask enemyLayers;  
     
     // Start is called before the first frame update
@@ -38,7 +38,11 @@ public class PlayerAttack : MonoBehaviour
             //enemy.GetComponent<DamageFlash>().FlashStart();
 
             //Subtract health from total
-            Debug.Log("We hit " + enemy.name);
+            if(enemy.name == "CEO")
+            {
+                Debug.Log("We hit " + enemy.name);
+                enemy.GetComponent<CEOHealth>().TakeDamage();
+            }
         }
     
     }
