@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: -9137508670625776915}
   - component: {fileID: -7154237918309976310}
   - component: {fileID: 5148280811634122577}
+  - component: {fileID: 2481230036240974273}
   m_Layer: 0
   m_Name: CEO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +159,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d7dc0160a049347a642e22e63b097b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &2481230036240974273
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395736151457920383}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.436628, y: 1.5176066}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 2.82}
+    newSize: {x: 1.5, y: 2.82}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7100172, y: 2.8825514}
+  m_EdgeRadius: 0

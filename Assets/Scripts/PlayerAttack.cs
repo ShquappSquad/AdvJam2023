@@ -8,6 +8,9 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     private float attackRange = 2.25f;
     public LayerMask enemyLayers;  
+
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
     
     // Start is called before the first frame update
     void Start()
@@ -17,10 +20,15 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(Time.time >= nextAttackTime)
         {
-            Attack();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f/attackRate;
+            }
         }
+        
     }
 
     void Attack()
@@ -42,6 +50,11 @@ public class PlayerAttack : MonoBehaviour
             {
                 Debug.Log("We hit " + enemy.name);
                 enemy.GetComponent<CEOHealth>().TakeDamage();
+            }
+            if(enemy.name == "Worker - Pipe")
+            {
+                Debug.Log("We hit " + enemy.name);
+                enemy.GetComponent<WorkerHealth>().TakeDamage();
             }
         }
     

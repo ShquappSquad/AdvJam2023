@@ -6,7 +6,6 @@ public class CEOHealth : MonoBehaviour
 {
     public float maxHealth;
     private float currentHealth;
-    private GameObject parent;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -36,14 +35,6 @@ public class CEOHealth : MonoBehaviour
 
     void Death()
     {
-        Debug.Log(name + " has died");
         Destroy(gameObject);
-
-        //Disable renderer
-        //Rigidbody2D.SetActive(false);
-
-        //Disable rigidbody
-
-        //Disable follow AND attack
     }
 }
