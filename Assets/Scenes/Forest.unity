@@ -12753,8 +12753,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ffe564349a5f34bbc3d797e2b94e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
-  currentHealth: 2
+  maxHealth: 5
+  animator: {fileID: 1157832145}
+--- !u!95 &1157832145 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -7154237918309976310, guid: 632b831b6d896884bb71bbea376e53d6, type: 3}
+  m_PrefabInstance: {fileID: 999448124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1157832147 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5804359384708957623, guid: 632b831b6d896884bb71bbea376e53d6, type: 3}
